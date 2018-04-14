@@ -33,6 +33,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rubocop', '~> 0.54.0'
 gem "rubocop-rails"
 gem 'devise'
+gem "paperclip", "~> 6.0.0"
+gem 'simple_form'
+
 
 
 
