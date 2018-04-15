@@ -9,5 +9,5 @@ def sign_up
 end
 
 def sign_out
-  click_link 'Sign out'
+  click_link 'Sign_out'
 end
