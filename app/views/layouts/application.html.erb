@@ -14,11 +14,13 @@
         <%= current_user.email %>
         -
         <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
+      <%= link_to "Add to feed", new_post_path %>
+    </p>
 
-      <br>
+    <br>
 
-    <% end %>
+  <% end %>
 
-    <%= yield %>
-  </body>
+  <%= yield %>
+</body>
 </html>
