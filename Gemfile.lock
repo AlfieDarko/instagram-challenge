@@ -194,6 +194,8 @@ GEM
     selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    semantic-ui-sass (2.3.1.2)
+      sass (>= 3.2)
     simple_form (4.0.0)
       actionpack (> 4)
       activemodel (> 4)
@@ -255,6 +257,7 @@ DEPENDENCIES
   rubocop-rails
   sass-rails (~> 5.0)
   selenium-webdriver
+  semantic-ui-sass
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -35,6 +35,7 @@ gem "rubocop-rails"
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
 gem 'simple_form'
+gem 'semantic-ui-sass'
 
 
 
