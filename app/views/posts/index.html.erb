@@ -1,9 +1,12 @@
 <h5>
   Winstagram Feed</h5>
 <br>
-<%= @posts.each do |post| %>
-<%= image_tag post.image.url(:medium) %>
+<% @posts.each do |post| %>
+  <div class="">
+    <%= image_tag post.image.url(:medium) %>
+    <br>
+    <%= post.caption %>
+    <br>
+  <% end %>
+</div>
 <br>
-<%= post.caption %>
-<br><br>
-<% end %>
