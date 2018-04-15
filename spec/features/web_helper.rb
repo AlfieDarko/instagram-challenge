@@ -7,3 +7,7 @@ def sign_up
   fill_in 'user[password_confirmation]', with: 'abc123'
   click_button 'Sign up'
 end
+
+def sign_out
+  click_link 'Sign out'
+end
