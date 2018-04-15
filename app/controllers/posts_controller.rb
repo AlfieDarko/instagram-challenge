@@ -6,6 +6,10 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def create
     @post = current_user.posts.new(post_params)
     @post.save
@@ -19,7 +23,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    puts current_user.id
     params.require(:post).permit(:image, :caption)
   end
 end

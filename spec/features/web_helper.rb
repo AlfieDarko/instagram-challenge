@@ -11,3 +11,10 @@ end
 def sign_out
   click_link 'Sign_out'
 end
+
+def add_post
+  click_link 'Add to feed'
+  attach_file('post[image]', File.absolute_path('./fileset/upload_pic.jpg'))
+  fill_in 'post[caption]', with: 'sports cars'
+  click_button 'Create Post'
+end
