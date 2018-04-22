@@ -23,29 +23,20 @@
           17 likes
         </span>
         <i class="comment icon"></i>
-        <%= post.comments.count %>
-        comments
+        <%= post.comments.count %><%= link_to " comments", post_comments_path(:post_id => post.id), :remote => true %>
       </div>
+      <br>
+      <div id="div_id<%= post.id %>"></div>
+
       <div class="extra content">
         <div class="ui large transparent left icon input">
-          <i class="heart outline icon"></i>
+          <%= render :partial => "new_comment", :remote => true, :post_id => post.id %>
         </div>
       </div>
     </div>
 
   </div>
-  <%= link_to "Add Comments", new_post_comment_path(:post_id => post.id, :user_id => current_user.id) %>
-
-  -- Comments Below
-  <% post.comments.each do |comment| %>
-    <div class="">
-      <br>
-      <%= User.find(comment.user_id).email %>:
-
-      <%= comment.body %>
-      <br>
-    <% end %>
-    <br>
-  <% end %>
+  <br>
+<% end %>
 </div>
 <br>

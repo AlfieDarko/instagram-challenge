@@ -2,8 +2,18 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # @post = Post.find(params[:post_id])
+    @post = Post.find(params[:post_id])
     @comments = Post.find_by_id(params[:post_id]).comments.all
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def show_comments
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
